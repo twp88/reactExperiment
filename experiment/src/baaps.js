@@ -9,13 +9,19 @@ class Baaps extends Component{
     this.state={ Beems:"Yo!" };
   }
 
-render() {
-    var title = "FRRAAAPPPSSS!"
+  changeBeems(Beems){
+    console.log('Hello from changeBeems')
+    this.setState({Beems});
+    console.log('Hello from changeBeems setState')
+    console.log('This is the state of affairs')
+    console.log(this.state.Beems)
+  }
 
+render() {
     return(
       <div>
-        <Beeps title ={this.state.Beems}/>
-        <Beeps title ={title}/>
+        {console.log('Hello from renderer')}
+        <h1><Beeps changeBeems={this.changeBeems=this.changeBeems.bind(this)} title={this.state.Beems}/></h1>
         <Freems/>
       </div>
   );
