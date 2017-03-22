@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
 import Beeps from './Beeps'
 import Freems from './freem'
+import TitleBeeps from './titleBeeps'
 
 class Baaps extends Component{
+  constructor(){
+    super();
+    this.state={ Beems:"Yo!" };
+  }
 
 render() {
-  var name = 'Blaaaaapppp Blooooppps';
-  var list = [
-    <Beeps changeName ={this.changeName}/>,
-    <Beeps/>,
-    <Beeps/>,
-  ];
+    var title = "FRRAAAPPPSSS!"
 
     return(
-    <div>
-       <Freems name={name} />
-      <ul>
-        {list}
-      </ul>
-    </div>
+      <div>
+        <Beeps title ={this.state.Beems}/>
+        <Beeps title ={title}/>
+        <Freems/>
+      </div>
   );
   }
 };
